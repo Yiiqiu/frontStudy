@@ -1,6 +1,8 @@
 <template>
   <div>
     hello vue
+
+    <router-view></router-view>
     <input type="text" ref="mytext"/>
     <button @click = "handleAdd()">add</button>
     <ul>
@@ -46,6 +48,7 @@ export default {
         this.datalist = res.data.movieList
       })
   },
+  // 局部注册
   components: {
     navbar: navbar,
     sidebar: sidebar
