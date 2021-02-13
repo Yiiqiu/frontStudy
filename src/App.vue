@@ -1,28 +1,30 @@
 <template>
   <div>
-    hello vue
-
+<!--    hello vue-->
+    <tabbar></tabbar>
     <router-view></router-view>
-    <input type="text" ref="mytext"/>
-    <button @click = "handleAdd()">add</button>
-    <ul>
-      <li v-for="data in datalist" :key="data.id">
-       {{data}}
-      </li>
 
-    </ul>
+<!--    <input type="text" ref="mytext"/>-->
+<!--    <button @click = "handleAdd()">add</button>-->
+<!--    <ul>-->
+<!--      <li v-for="data in datalist" :key="data.id">-->
+<!--       {{data}}-->
+<!--      </li>-->
 
-    <navbar>
-      <button @click="isShow = !isShow">navbar</button>
-    </navbar>
-    <sidebar v-show="isShow"></sidebar>
+<!--    </ul>-->
+
+<!--    <navbar>-->
+<!--      <button @click="isShow = !isShow">navbar</button>-->
+<!--    </navbar>-->
+<!--    <sidebar v-show="isShow"></sidebar>-->
   </div>
 </template>
 
 <script>
-import navbar from './components/Navbar'
-import sidebar from './components/Sidebar'
+// import navbar from './components/Navbar'
+// import sidebar from './components/Sidebar'
 import axios from 'axios'
+import tabbar from './components/Tabbar'
 // 全局注册
 // import Vue from 'vue'
 // Vue.component('navbar', navbar)
@@ -50,14 +52,17 @@ export default {
   },
   // 局部注册
   components: {
-    navbar: navbar,
-    sidebar: sidebar
+
+    // eslint-disable-next-line vue/no-unused-components
+    tabbar: tabbar
+    // navbar: navbar,
+    // sidebar: sidebar
   }
 
 }
 </script>
 
-<style lang = scss>
+<style lang = scss scoped>
 
   ul {
     list-style: none;
