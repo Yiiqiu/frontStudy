@@ -4,7 +4,7 @@
     <input type="text" ref="mytext"/>
     <button @click = "handleAdd()">add</button>
     <ul>
-      <li v-for="data in datalist" :key="data">
+      <li v-for="data in datalist" :key="data.id">
        {{data}}
       </li>
 
@@ -42,7 +42,8 @@ export default {
   mounted () {
     axios.get('/ajax/movieOnInfoList?token=&optimus_uuid=95D5BC406E0011EB8E2F1DBC23FF48409BF5E314A9BE4469A114A553C6923067&optimus_risk_level=71&optimus_code=10')
       .then(res => {
-        console.log(res.data)
+        // console.log(res.data)
+        this.datalist = res.data.movieList
       })
   },
   components: {
