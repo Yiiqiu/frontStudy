@@ -20,6 +20,7 @@
 <script>
 import navbar from './components/Navbar'
 import sidebar from './components/Sidebar'
+import axios from 'axios'
 // 全局注册
 // import Vue from 'vue'
 // Vue.component('navbar', navbar)
@@ -37,6 +38,12 @@ export default {
     handleAdd () {
       this.datalist.push(this.$refs.mytext.value)
     }
+  },
+  mounted () {
+    axios.get('/ajax/movieOnInfoList?token=&optimus_uuid=95D5BC406E0011EB8E2F1DBC23FF48409BF5E314A9BE4469A114A553C6923067&optimus_risk_level=71&optimus_code=10')
+      .then(res => {
+        console.log(res.data)
+      })
   },
   components: {
     navbar: navbar,
