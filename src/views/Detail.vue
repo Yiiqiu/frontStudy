@@ -2,6 +2,7 @@
 
   <div>
     广告{{data}}的详情页
+<!--    注意，案例1，是vue-router的案例-->
   </div>
 
 </template>
