@@ -4,8 +4,9 @@ import Router from 'vue-router'
 import Center from '@/views/Center'
 import Cinema from '@/views/Cinema'
 import Film from '@/views/Film'
-import comingsoon from '@/views/Film/Comingsoon'
-import nowplaying from '@/views/Film/Nowplaying'
+import Comingsoon from '@/views/Film/Comingsoon'
+import Nowplaying from '@/views/Film/Nowplaying'
+import Detail from '@/views/Detail'
 
 Vue.use(Router)
 
@@ -35,11 +36,11 @@ const router = new Router({
       children: [
         {
           path: '/film/nowplaying',
-          component: nowplaying
+          component: Nowplaying
         },
         {
           path: '/film/comingsoon',
-          component: comingsoon
+          component: Comingsoon
         },
         {
           // 如果输入的都不符合，就重定向到nowplaying
@@ -55,6 +56,10 @@ const router = new Router({
     {
       path: '/center',
       component: Center
+    },
+    {
+      path: '/detail/:myid',
+      component: Detail
     },
     {
       // 如果输入的都不符合，就重定向到/film
