@@ -7,6 +7,7 @@ import Film from '@/views/Film'
 import Comingsoon from '@/views/Film/Comingsoon'
 import Nowplaying from '@/views/Film/Nowplaying'
 import Detail from '@/views/Detail'
+import Login from '@/views/Login'
 
 Vue.use(Router)
 
@@ -61,6 +62,10 @@ const router = new Router({
       path: '/detail/:myid',
       name: 'mydetail',
       component: Detail
+    },
+    {
+      path: '/login',
+      component: Login
     },
     {
       // 如果输入的都不符合，就重定向到/film
