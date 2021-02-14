@@ -18,7 +18,10 @@ export default {
   methods: {
     handleChangePage (id) {
       console.log(`/detail/${id}`)
-      this.$router.push(`/detail/${id}`)
+      // 路由的1种写法
+      // this.$router.push(`/detail/${id}`)
+      // 路由的另外一种写法，命名路由
+      this.$router.push({ name: 'mydetail', params: { myid: id } })
     }
   }
 }
