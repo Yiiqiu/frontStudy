@@ -1,8 +1,8 @@
 <template>
   <div>
 <!--    hello vue-->
-    <tabbar></tabbar>
     <router-view></router-view>
+    <tabbar></tabbar>
 
 <!--    <input type="text" ref="mytext"/>-->
 <!--    <button @click = "handleAdd()">add</button>-->
